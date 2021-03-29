@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Final Exam</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+    </head>
+    <body>
+    <table>
+        <tr><td class="fragment" th:insert="HeaderImg.html:: span.SheridanLogo"></td>
+
+            <td class="fragment"><th:block th:insert="HeaderImg.html :: header"></th:block></td></tr>
+    </table>
+
+
+    <footer th:replace="HeaderImg.html :: footer"></footer>
+    </body>
+</html>

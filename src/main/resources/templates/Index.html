@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Final Exam</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+    </head>
+    <body>
+    <header>
+        <table>
+            <tr>
+                <td th:insert="HeaderImg.html :: span.SheridanLogo"></td>
+                <td class="fragment" th:insert="HeaderImg.html :: header"></td></tr></table>
+    </header>
+                <form method="post" th:action="@{/listContinent}">
+            <table><tr><td>
+                <h1>Sheridan Midterm</h1></td></tr>
+                <tr><td><th:block th:insert="HeaderImg.html :: span.Sheridan"></th:block></td>
+                    <td>
+                <tr>
+                    <td>Select Continent:</td>
+                    
+                    <td>
+                        <select name="continent" style="width:50px;">
+                             <option th:value="All">All</option>
+                            <option th:value="Asia">Asia</option>
+                            <option th:value="Africa">Africa</option>
+                            <option th:value="America">America</option>
+                            <option th:value="Europe">Europe</option>
+                            <option th:value="Oceania">Oceania</option>
+                          
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="List Countries"></td>
+                </tr>
+            </table>
+        </form>
+        <br><br><br><hr>
+        <form method="post" th:action="@{/addCountry}">
+           <input type="submit" value="Add">
+        </form>
+    <footer th:replace="HeaderImg.html :: footer"></footer>
+    </body>
+</html>
